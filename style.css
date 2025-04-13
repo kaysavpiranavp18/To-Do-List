@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #444;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+h1 {
+  color: rgb(179, 131, 226);
+  font-size: 5rem;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.input {
+  border: 2px solid #ddd;
+  padding: 1rem 2rem;
+  width: 80%;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  border-color: rgb(179, 131, 226);
+}
+
+.todos {
+  list-style-type: none;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.todos li {
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 15px 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.todos li:hover {
+  transform: scale(1.03);
+}
+
+.todos li.completed {
+  color: #b6b6b6;
+  text-decoration: line-through;
+}
+
+.todos li.completed:hover {
+  transform: scale(1);
+}
+
+small {
+  font-size: 0.9rem;
+  color: #b5b5b5;
+  margin-top: 1rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-btn {
+  background-color: rgb(179, 131, 226);
+  color: white;
+}
+
+.add-btn:hover {
+  background-color: rgb(154, 115, 190);
+}
+
+.clear-btn {
+  background-color: #f44336;
+  color: white;
+  margin-top: 15px;
+}
+
+.clear-btn:hover {
+  background-color: #d32f2f;
+}
+
+.clear-btn:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.theme-toggle-btn {
+  background-color: #00bcd4;
+  color: white;
+  margin-top: 15px;
+}
+
+.theme-toggle-btn:hover {
+  background-color: #0097a7;
+}
+
+/* Dark Theme */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode h1 {
+  color: #b3a0e6;
+}
+
+body.dark-mode .container {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .input {
+  background-color: #ffffff;
+  border-color: #444;
+  color: #b3a0e6;
+}
+body.dark-mode .input::placeholder {
+  color: rgb(179, 131, 226);
+  opacity: 0.7;
+}
+
+body.dark-mode .todos li {
+  background-color: #2c2c2c;
+  color: #fff;
+}
+
+body.dark-mode .todos li.completed {
+  color: #7f7f7f;
+}
+
+body.dark-mode .todos li:hover {
+  background-color: #444;
+}
+
+body.dark-mode .clear-btn {
+  background-color: #f44336;
+}
+
+body.dark-mode .clear-btn:hover {
+  background-color: #d32f2f;
+}
+
+body.dark-mode .theme-toggle-btn {
+  background-color: #ff9800;
+}
+
+body.dark-mode .theme-toggle-btn:hover {
+  background-color: #f57c00;
+}
+
